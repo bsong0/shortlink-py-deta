@@ -1,1 +1,0 @@
-{"id":"b68b6c1f-05b2-49dc-afd1-9440e4740034","space":23431,"runtime":"python3.9","name":"shortlink","path":"fwaksk","project":"b0z4ri8l","account":"144798365827","region":"us-west-1","deps":["deta~=1.1.0","fastapi~=0.78.0"],"envs":null,"public":true,"log_level":"off","cron":""}
