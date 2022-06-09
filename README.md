@@ -32,3 +32,10 @@ deta deploy
 ## Demo
 
 Due to abuse, I won't provide a Demo.
+
+
+## Contributing
+
+By adding DBConnections implementation in the db folder, this application can support other databases.
+You can do it by creating a new file in `db` folder and implements a class that inherits `DBCOnnection` abstract class.
+You can then change the `database` variable in `main.py` to anything you want.
