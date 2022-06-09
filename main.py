@@ -10,12 +10,18 @@ database = db.DetaDBConnectionImpl.DetaDBConnectionImpl()
 @app.get("/{path}")
 async def root(path: str, src: str = None, to: str = None):
     if path == 'new':
-        database.put(src, to)
-        return {'source': src, 'to': to}
+        if src is not None and to is not None:
+            database.put(src, to)
+            return {'source': src, 'to': to}
+        else:
+            return "Not Found"
 
-    if path == 'remove':
-        database.delete(src)
-        return "Success"
+    if path == 'del':
+        if src is not None:
+            database.delete(src)
+            return "Success"
+        else:
+            return "Not Found"
 
     link = database.get(path)
     if link is not None:
